@@ -5,8 +5,9 @@ spring:
 server:
   tomcat:
     uri-encoding: UTF-8
-    max-threads: 1000
-    min-spare-threads: 30
+    threads:
+      max: 1000
+      min-spare: 30
   port: 8888
   servlet:
     context-path: /admin
