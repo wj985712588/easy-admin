@@ -15,10 +15,16 @@ import java.util.Date;
 public class BaseEntity {
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    @TableField(value = "create_date", fill = FieldFill.INSERT)
-    private Date createDate;
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    private Date createTime;
+
+    @TableField("create_user")
+    private String createUser;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    @TableField(value = "modify_date", fill = FieldFill.INSERT_UPDATE)
-    private Date modifyDate;
+    @TableField(value = "modify_time", fill = FieldFill.INSERT_UPDATE)
+    private Date modifyTime;
+
+    @TableField("modify_user")
+    private String modifyUser;
 }

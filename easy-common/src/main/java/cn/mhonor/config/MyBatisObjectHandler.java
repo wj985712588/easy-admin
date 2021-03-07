@@ -15,12 +15,12 @@ public class MyBatisObjectHandler implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.setFieldValByName("createDate", new Date(), metaObject);
-        this.setFieldValByName("modifyDate", new Date(), metaObject);
+        this.setFieldValByName("createTime", new Date(), metaObject);
+        this.setFieldValByName("modifyTime", new Date(), metaObject);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        this.setFieldValByName("modifyDate", new Date(), metaObject);
+        this.setFieldValByName("modifyTime", new Date(), metaObject);
     }
 }
